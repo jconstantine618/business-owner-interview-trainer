@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # ---------- ENV / CONFIG ----------
 load_dotenv()                           # optional .env support
 openai.api_key  = st.secrets.get("OPENAI_API_KEY") or st.getenv("OPENAI_API_KEY")
-DATA_DIR        = pathlib.Path("candidate_personas")   # folder with *.json files
+DATA_DIR        = pathlib.Path("data")   # folder with *.json files
 MODEL_NAME      = "gpt-4o-mini"        # adjust as desired
 MAX_CANDIDATES  = 4                    # max interviews per session
 
