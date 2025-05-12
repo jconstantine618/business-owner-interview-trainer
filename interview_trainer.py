@@ -1,5 +1,5 @@
 # interview_trainer.py
-# Streamlit Interview Training Chatbot ✦ v0.3.1
+# Interview Training Chatbot (Streamlit + OpenAI SDK v1.0+)
 
 import os
 import json
@@ -7,17 +7,19 @@ import pathlib
 import re
 from collections import defaultdict
 
-import openai
 import streamlit as st
 from dotenv import load_dotenv
+from openai import OpenAI
 
-# ---------- ENV / CONFIG ----------
+# ---------- CONFIG ----------
 load_dotenv()
-openai.api_key = st.secrets.get("OPENAI_API_KEY", "") or os.getenv("OPENAI_API_KEY")
+client = OpenAI(
+    api_key=st.secrets.get("OPENAI_API_KEY", "") or os.getenv("OPENAI_API_KEY")
+)
 
-DATA_DIR = pathlib.Path("data")       # folder with your candidate JSON files
-MODEL_NAME = "gpt-4o-mini"            # or gpt-4o, gpt-4-turbo, etc.
-MAX_CANDIDATES = 4                    # number of candidates user can interview
+DATA_DIR = pathlib.Path("data")
+MODEL_NAME = "gpt-4o"  # or gpt-4o-mini, gpt-4-turbo, etc.
+MAX_CANDIDATES = 4
 
 # ---------- HELPERS ----------
 @st.cache_resource
@@ -34,7 +36,7 @@ def open_json(path: pathlib.Path) -> dict:
 def init_session():
     ss = st.session_state
     defaults = {
-        "phase": "setup",       # setup → interview → selection → score
+        "phase": "setup",
         "role_label": None,
         "role_data": None,
         "shortlist": [],
@@ -78,11 +80,11 @@ def score_interview(chat: list, candidate: dict) -> dict:
         for msg in chat
     )
 
-    s_question  = int(30 * len(open_qs) / max(len(questions), 1))
-    s_flags     = int(25 * discovered / max(len(red_flags), 1)) if red_flags else 25
-    s_flow      = 15  # placeholder
-    s_etiquette = 10  # placeholder
-    subtotal    = s_question + s_flags + s_flow + s_etiquette
+    s_question = int(30 * len(open_qs) / max(len(questions), 1))
+    s_flags = int(25 * discovered / max(len(red_flags), 1)) if red_flags else 25
+    s_flow = 15
+    s_etiquette = 10
+    subtotal = s_question + s_flags + s_flow + s_etiquette
 
     return {
         "question_quality": s_question,
@@ -92,14 +94,14 @@ def score_interview(chat: list, candidate: dict) -> dict:
         "subtotal": subtotal
     }
 
-# ---------- MAIN APP FLOW ----------
+# ---------- APP ----------
 init_session()
 ss = st.session_state
 roles_map = load_roles()
 
 st.title("🧑‍💼 Interview Training Simulator")
 
-# ---------- Phase 1: Setup ----------
+# ---------- Setup ----------
 if ss.phase == "setup":
     ss.role_label = st.selectbox("Select the role you’re hiring for:", list(roles_map))
     if ss.role_label:
@@ -123,7 +125,7 @@ if ss.phase == "setup":
             ss.phase = "interview"
             st.rerun()
 
-# ---------- Phase 2: Interview ----------
+# ---------- Interview ----------
 elif ss.phase == "interview":
     rank = ss.shortlist[ss.current_idx]
     cand = get_candidate(rank, ss.role_data)
@@ -136,12 +138,13 @@ elif ss.phase == "interview":
     user_q = st.chat_input("Your question")
     if user_q:
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
-        result = openai.ChatCompletion.create(
+
+        result = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[
                 {"role": "system", "content": system_prompt(cand, ss.role_data["role"])},
                 *[
-                    {"role": ("assistant" if m["sender"] == "ai" else "user"), "content": m["text"]}
+                    {"role": "assistant" if m["sender"] == "ai" else "user", "content": m["text"]}
                     for m in ss.chat_logs[cand["id"]]
                 ]
             ],
@@ -160,7 +163,7 @@ elif ss.phase == "interview":
             ss.phase = "selection"
         st.rerun()
 
-# ---------- Phase 3: Candidate Selection ----------
+# ---------- Selection ----------
 elif ss.phase == "selection":
     st.header("Select your final hire")
     id_map = {
@@ -173,7 +176,7 @@ elif ss.phase == "selection":
         ss.phase = "score"
         st.rerun()
 
-# ---------- Phase 4: Scoring ----------
+# ---------- Scoring ----------
 elif ss.phase == "score":
     total = sum(v["subtotal"] for v in ss.scorecard.values())
     best = min(ss.shortlist)
@@ -181,10 +184,10 @@ elif ss.phase == "score":
     bonus = 20 if chosen_rank == best else (15 if chosen_rank == best + 1 else 5)
     total += bonus
 
-    st.success(f"🎯 **Overall Interview Score: {total}/100** (Evaluation Bonus: {bonus} pts)")
+    st.success(f"🎯 **Overall Interview Score: {total}/100** (Bonus: {bonus} pts)")
 
     st.subheader("Strengths")
-    st.write("- Strong open-ended questioning 👍" if total > 60 else "- Good start, but dig deeper with probing questions.")
+    st.write("- Strong open-ended questioning 👍" if total > 60 else "- Work on deeper probing and follow-ups.")
 
     st.subheader("Missed Opportunities")
     missed = []
