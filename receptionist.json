@@ -1,0 +1,255 @@
+{
+  "role": "Receptionist / Front\u2011Desk Coordinator",
+  "competencies": [
+    "First\u2011impression management",
+    "Multitasking",
+    "Technology adoption"
+  ],
+  "question_bank": [
+    "Tell me about a time you handled simultaneous visitors and phone calls.",
+    "Describe how you adapted to new scheduling software.",
+    "Share an example of diffusing a frustrated guest in the lobby."
+  ],
+  "candidates": [
+    {
+      "id": "RE-01",
+      "name": "Alex Patel",
+      "rank": 1,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Sunrise Dental",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Meadowview Clinic",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Customer Escalation",
+          "CRM",
+          "HubSpot",
+          "Python",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    },
+    {
+      "id": "RE-02",
+      "name": "Harper Martinez",
+      "rank": 2,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Urban Suites",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Urban Suites",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Troubleshooting",
+          "HubSpot",
+          "MEDDIC",
+          "Safety Compliance",
+          "Negotiation"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "RE-03",
+      "name": "Morgan Brown",
+      "rank": 3,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Aspire Fitness",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Urban Suites",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Excel",
+          "Troubleshooting",
+          "MEDDIC",
+          "Content Creation",
+          "Negotiation"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "RE-04",
+      "name": "Jamie Johnson",
+      "rank": 4,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Sunrise Dental",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Urban Suites",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Content Creation",
+          "Customer Escalation",
+          "HubSpot",
+          "CRM",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "RE-05",
+      "name": "Jordan O'Neil",
+      "rank": 5,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Urban Suites",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Aspire Fitness",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Content Creation",
+          "Safety Compliance",
+          "Excel",
+          "Customer Escalation",
+          "Troubleshooting"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "RE-06",
+      "name": "Morgan Smith",
+      "rank": 6,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Meadowview Clinic",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Urban Suites",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Safety Compliance",
+          "Content Creation",
+          "Excel",
+          "CRM",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "RE-07",
+      "name": "Riley Davis",
+      "rank": 7,
+      "resume": {
+        "headline": "Front\u2011desk pro creating stellar first impressions",
+        "experience": [
+          {
+            "company": "Urban Suites",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Sunrise Dental",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "HubSpot",
+          "MEDDIC",
+          "QuickBooks",
+          "Content Creation",
+          "CRM"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    }
+  ]
+}

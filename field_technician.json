@@ -1,0 +1,252 @@
+{
+  "role": "Field Technician",
+  "competencies": [
+    "Troubleshooting",
+    "Customer on\u2011site etiquette",
+    "Safety"
+  ],
+  "question_bank": [
+    "Tell me about your toughest on\u2011site repair and how you kept the client informed.",
+    "Describe a time you followed safety protocols under pressure.",
+    "Give an example of when you couldn\u2019t fix an issue immediately \u2014 what steps did you take?"
+  ],
+  "candidates": [
+    {
+      "id": "FI-01",
+      "name": "Quinn Patel",
+      "rank": 1,
+      "resume": {
+        "headline": "Certified technician with 112 field repairs completed",
+        "experience": [
+          {
+            "company": "GigaNet Services",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "GigaNet Services",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Google Analytics",
+          "MEDDIC",
+          "Troubleshooting",
+          "Excel",
+          "CRM"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "FI-02",
+      "name": "Casey Lopez",
+      "rank": 2,
+      "resume": {
+        "headline": "Certified technician with 124 field repairs completed",
+        "experience": [
+          {
+            "company": "Volt Systems",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Prime Installations",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "HubSpot",
+          "Troubleshooting",
+          "Python",
+          "QuickBooks",
+          "MEDDIC"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "FI-03",
+      "name": "Jamie Kim",
+      "rank": 3,
+      "resume": {
+        "headline": "Certified technician with 129 field repairs completed",
+        "experience": [
+          {
+            "company": "GigaNet Services",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Volt Systems",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "CRM",
+          "HubSpot",
+          "Excel",
+          "Customer Escalation",
+          "MEDDIC"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "FI-04",
+      "name": "Riley Davis",
+      "rank": 4,
+      "resume": {
+        "headline": "Certified technician with 115 field repairs completed",
+        "experience": [
+          {
+            "company": "Prime Installations",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Apex Repairs",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "MEDDIC",
+          "CRM",
+          "QuickBooks",
+          "Customer Escalation",
+          "Safety Compliance"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "FI-05",
+      "name": "Cameron O'Neil",
+      "rank": 5,
+      "resume": {
+        "headline": "Certified technician with 111 field repairs completed",
+        "experience": [
+          {
+            "company": "Apex Repairs",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Prime Installations",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "CRM",
+          "MEDDIC",
+          "QuickBooks",
+          "Troubleshooting",
+          "Excel"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "FI-06",
+      "name": "Riley Kim",
+      "rank": 6,
+      "resume": {
+        "headline": "Certified technician with 118 field repairs completed",
+        "experience": [
+          {
+            "company": "Volt Systems",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Volt Systems",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "HubSpot",
+          "Negotiation",
+          "Content Creation",
+          "Troubleshooting",
+          "QuickBooks"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "FI-07",
+      "name": "Jordan O'Neil",
+      "rank": 7,
+      "resume": {
+        "headline": "Certified technician with 135 field repairs completed",
+        "experience": [
+          {
+            "company": "Prime Installations",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Volt Systems",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Customer Escalation",
+          "Negotiation",
+          "Safety Compliance",
+          "QuickBooks",
+          "Excel"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    }
+  ]
+}

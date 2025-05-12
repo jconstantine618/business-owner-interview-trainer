@@ -1,0 +1,257 @@
+{
+  "role": "Office Manager",
+  "competencies": [
+    "Prioritization",
+    "Vendor coordination",
+    "Culture champion"
+  ],
+  "question_bank": [
+    "Tell us about a time you were the unofficial leader on a project. What went well and what would you change?",
+    "Describe a situation where you implemented a new process that saved time or money.",
+    "Give an example of juggling competing executive requests.",
+    "Tell me about a vendor dispute you resolved."
+  ],
+  "candidates": [
+    {
+      "id": "OF-01",
+      "name": "Casey Garcia",
+      "rank": 1,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Vertex Agency",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Horizon Ventures",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "QuickBooks",
+          "Negotiation",
+          "Customer Escalation",
+          "Python",
+          "Safety Compliance"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "OF-02",
+      "name": "Avery Kim",
+      "rank": 2,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Horizon Ventures",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "BlueSky Consulting",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "HubSpot",
+          "Content Creation",
+          "QuickBooks",
+          "Troubleshooting",
+          "Excel"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OF-03",
+      "name": "Alex Nguyen",
+      "rank": 3,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Horizon Ventures",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Horizon Ventures",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Negotiation",
+          "HubSpot",
+          "Python",
+          "Content Creation",
+          "Troubleshooting"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OF-04",
+      "name": "Taylor Davis",
+      "rank": 4,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Vertex Agency",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Horizon Ventures",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Customer Escalation",
+          "QuickBooks",
+          "HubSpot",
+          "Google Analytics",
+          "Python"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OF-05",
+      "name": "Morgan Kim",
+      "rank": 5,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Horizon Ventures",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Horizon Ventures",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "MEDDIC",
+          "Negotiation",
+          "Safety Compliance",
+          "QuickBooks",
+          "Python"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    },
+    {
+      "id": "OF-06",
+      "name": "Cameron Johnson",
+      "rank": 6,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "BlueSky Consulting",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "BlueSky Consulting",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "HubSpot",
+          "Negotiation",
+          "Safety Compliance",
+          "MEDDIC",
+          "QuickBooks"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OF-07",
+      "name": "Drew Brown",
+      "rank": 7,
+      "resume": {
+        "headline": "Office operations lead optimizing workflows and morale",
+        "experience": [
+          {
+            "company": "Vertex Agency",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Horizon Ventures",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Troubleshooting",
+          "Customer Escalation",
+          "Google Analytics",
+          "Content Creation",
+          "QuickBooks"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    }
+  ]
+}

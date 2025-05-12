@@ -1,0 +1,246 @@
+{
+  "role": "Bookkeeper / Accountant",
+  "competencies": [
+    "Accuracy",
+    "GAAP",
+    "Confidentiality"
+  ],
+  "question_bank": [
+    "Share a time you discovered an error that others missed. What was your process to correct it?",
+    "Describe how you handle conflicting priorities during month\u2011end close.",
+    "Tell me about implementing a new accounting system or tool."
+  ],
+  "candidates": [
+    {
+      "id": "BO-01",
+      "name": "Casey Davis",
+      "rank": 1,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "LedgerPro",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Greenfield Farms",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Negotiation",
+          "Python",
+          "Excel",
+          "Troubleshooting",
+          "QuickBooks"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "BO-02",
+      "name": "Avery Kim",
+      "rank": 2,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "LedgerPro",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Synergy Motors",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "QuickBooks",
+          "Python",
+          "Excel",
+          "MEDDIC",
+          "Content Creation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        },
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    },
+    {
+      "id": "BO-03",
+      "name": "Quinn Lopez",
+      "rank": 3,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "Greenfield Farms",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Pinnacle Foods",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "HubSpot",
+          "MEDDIC",
+          "Content Creation",
+          "Google Analytics",
+          "Troubleshooting"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "BO-04",
+      "name": "Jordan Lopez",
+      "rank": 4,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "LedgerPro",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "LedgerPro",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "CRM",
+          "Content Creation",
+          "Negotiation",
+          "QuickBooks",
+          "HubSpot"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "BO-05",
+      "name": "Riley Nguyen",
+      "rank": 5,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "LedgerPro",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "LedgerPro",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Content Creation",
+          "Python",
+          "Safety Compliance",
+          "Google Analytics",
+          "CRM"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "BO-06",
+      "name": "Jordan Davis",
+      "rank": 6,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "Synergy Motors",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Greenfield Farms",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "QuickBooks",
+          "Content Creation",
+          "Python",
+          "Negotiation",
+          "Excel"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "BO-07",
+      "name": "Jamie Patel",
+      "rank": 7,
+      "resume": {
+        "headline": "Detail\u2011oriented bookkeeper ensuring error\u2011free ledgers",
+        "experience": [
+          {
+            "company": "Greenfield Farms",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "LedgerPro",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Customer Escalation",
+          "Troubleshooting",
+          "Python",
+          "HubSpot",
+          "Content Creation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    }
+  ]
+}

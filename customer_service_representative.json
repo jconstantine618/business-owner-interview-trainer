@@ -1,0 +1,256 @@
+{
+  "role": "Customer Service Representative",
+  "competencies": [
+    "De\u2011escalation",
+    "Empathy",
+    "Multichannel support"
+  ],
+  "question_bank": [
+    "Can you give an example of a conflict with a customer and how you resolved it?",
+    "Describe a time you went above and beyond for a customer.",
+    "Tell me about a moment you had to balance speed with accuracy.",
+    "Share a time system downtime affected customers \u2014 what did you do first?"
+  ],
+  "candidates": [
+    {
+      "id": "CU-01",
+      "name": "Casey Johnson",
+      "rank": 1,
+      "resume": {
+        "headline": "Customer advocate with 112% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "Helix Support",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Helix Support",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "CRM",
+          "Negotiation",
+          "QuickBooks",
+          "HubSpot",
+          "Python"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "CU-02",
+      "name": "Jordan O'Neil",
+      "rank": 2,
+      "resume": {
+        "headline": "Customer advocate with 137% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "BrightBank",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Helix Support",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Google Analytics",
+          "HubSpot",
+          "Excel",
+          "QuickBooks",
+          "Negotiation"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "CU-03",
+      "name": "Casey Brown",
+      "rank": 3,
+      "resume": {
+        "headline": "Customer advocate with 120% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "RetailPlus",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Nova Telecom",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "MEDDIC",
+          "Troubleshooting",
+          "Excel",
+          "QuickBooks",
+          "Python"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "CU-04",
+      "name": "Quinn Johnson",
+      "rank": 4,
+      "resume": {
+        "headline": "Customer advocate with 134% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "Helix Support",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Nova Telecom",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Content Creation",
+          "Customer Escalation",
+          "Negotiation",
+          "Google Analytics",
+          "Python"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "CU-05",
+      "name": "Drew Garcia",
+      "rank": 5,
+      "resume": {
+        "headline": "Customer advocate with 110% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "BrightBank",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Nova Telecom",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "Troubleshooting",
+          "CRM",
+          "Negotiation",
+          "MEDDIC",
+          "Content Creation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "CU-06",
+      "name": "Casey Martinez",
+      "rank": 6,
+      "resume": {
+        "headline": "Customer advocate with 113% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "RetailPlus",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Nova Telecom",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "Negotiation",
+          "Python",
+          "Google Analytics",
+          "QuickBooks",
+          "HubSpot"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "CU-07",
+      "name": "Riley O'Neil",
+      "rank": 7,
+      "resume": {
+        "headline": "Customer advocate with 110% CSAT and omnichannel expertise",
+        "experience": [
+          {
+            "company": "RetailPlus",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Helix Support",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Python",
+          "HubSpot",
+          "Troubleshooting",
+          "QuickBooks",
+          "CRM"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    }
+  ]
+}

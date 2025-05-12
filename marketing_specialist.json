@@ -1,0 +1,252 @@
+{
+  "role": "Marketing Specialist",
+  "competencies": [
+    "Campaign execution",
+    "Analytics",
+    "Content production"
+  ],
+  "question_bank": [
+    "Walk me through a campaign that didn\u2019t meet goals. How did you diagnose the issue?",
+    "Describe a time your data insight changed the creative direction.",
+    "Tell me about a project where you had limited resources but big targets.",
+    "Give an example of collaborating with sales to improve lead quality."
+  ],
+  "candidates": [
+    {
+      "id": "MA-01",
+      "name": "Avery O'Neil",
+      "rank": 1,
+      "resume": {
+        "headline": "Data-driven marketer delivering 116% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "Echo Media",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "PixelWave",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Safety Compliance",
+          "Negotiation",
+          "CRM",
+          "Troubleshooting",
+          "Python"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "MA-02",
+      "name": "Morgan O'Neil",
+      "rank": 2,
+      "resume": {
+        "headline": "Data-driven marketer delivering 128% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "PixelWave",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Lumen Digital",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Customer Escalation",
+          "Negotiation",
+          "Python",
+          "Google Analytics",
+          "QuickBooks"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "MA-03",
+      "name": "Jamie Martinez",
+      "rank": 3,
+      "resume": {
+        "headline": "Data-driven marketer delivering 126% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "Lumen Digital",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "GrowthHub",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Python",
+          "CRM",
+          "QuickBooks",
+          "Negotiation",
+          "MEDDIC"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "MA-04",
+      "name": "Jamie Smith",
+      "rank": 4,
+      "resume": {
+        "headline": "Data-driven marketer delivering 132% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "Lumen Digital",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "PixelWave",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "QuickBooks",
+          "CRM",
+          "MEDDIC",
+          "Troubleshooting",
+          "Python"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    },
+    {
+      "id": "MA-05",
+      "name": "Riley Brown",
+      "rank": 5,
+      "resume": {
+        "headline": "Data-driven marketer delivering 126% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "Lumen Digital",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "GrowthHub",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "Safety Compliance",
+          "Content Creation",
+          "Negotiation",
+          "Google Analytics",
+          "Customer Escalation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "MA-06",
+      "name": "Riley Martinez",
+      "rank": 6,
+      "resume": {
+        "headline": "Data-driven marketer delivering 133% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "Lumen Digital",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "GrowthHub",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Troubleshooting",
+          "Google Analytics",
+          "Content Creation",
+          "Safety Compliance",
+          "Negotiation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "MA-07",
+      "name": "Drew Davis",
+      "rank": 7,
+      "resume": {
+        "headline": "Data-driven marketer delivering 133% lift in campaign ROAS",
+        "experience": [
+          {
+            "company": "GrowthHub",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Lumen Digital",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "MEDDIC",
+          "Customer Escalation",
+          "Excel",
+          "Negotiation",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    }
+  ]
+}

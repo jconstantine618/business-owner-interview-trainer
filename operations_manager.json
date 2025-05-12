@@ -1,0 +1,257 @@
+{
+  "role": "Operations Manager",
+  "competencies": [
+    "Process design",
+    "KPI tracking",
+    "Cross\u2011functional leadership"
+  ],
+  "question_bank": [
+    "Give an example of reducing costs without hurting quality.",
+    "Describe a situation where you aligned multiple departments around a new SOP.",
+    "Tell me about a time you had to escalate a supply\u2011chain issue quickly."
+  ],
+  "candidates": [
+    {
+      "id": "OP-01",
+      "name": "Taylor Johnson",
+      "rank": 1,
+      "resume": {
+        "headline": "Process innovator reducing costs by 135% while boosting KPIs",
+        "experience": [
+          {
+            "company": "NorthStar Manufacturing",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "CargoOne Logistics",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "CRM",
+          "Google Analytics",
+          "Troubleshooting",
+          "Content Creation",
+          "Safety Compliance"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OP-02",
+      "name": "Cameron Johnson",
+      "rank": 2,
+      "resume": {
+        "headline": "Process innovator reducing costs by 120% while boosting KPIs",
+        "experience": [
+          {
+            "company": "Quantum Plastics",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "EcoFresh Foods",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "Negotiation",
+          "CRM",
+          "Excel",
+          "MEDDIC",
+          "Safety Compliance"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OP-03",
+      "name": "Drew Martinez",
+      "rank": 3,
+      "resume": {
+        "headline": "Process innovator reducing costs by 112% while boosting KPIs",
+        "experience": [
+          {
+            "company": "CargoOne Logistics",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "EcoFresh Foods",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Troubleshooting",
+          "CRM",
+          "HubSpot",
+          "Content Creation",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OP-04",
+      "name": "Harper Martinez",
+      "rank": 4,
+      "resume": {
+        "headline": "Process innovator reducing costs by 115% while boosting KPIs",
+        "experience": [
+          {
+            "company": "EcoFresh Foods",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Quantum Plastics",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.S. Business Administration",
+        "skills": [
+          "Excel",
+          "Python",
+          "Google Analytics",
+          "Negotiation",
+          "Customer Escalation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    },
+    {
+      "id": "OP-05",
+      "name": "Alex Lopez",
+      "rank": 5,
+      "resume": {
+        "headline": "Process innovator reducing costs by 122% while boosting KPIs",
+        "experience": [
+          {
+            "company": "Quantum Plastics",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "CargoOne Logistics",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Content Creation",
+          "Safety Compliance",
+          "Customer Escalation",
+          "HubSpot",
+          "Negotiation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "OP-06",
+      "name": "Taylor Nguyen",
+      "rank": 6,
+      "resume": {
+        "headline": "Process innovator reducing costs by 129% while boosting KPIs",
+        "experience": [
+          {
+            "company": "NorthStar Manufacturing",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "CargoOne Logistics",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "HubSpot",
+          "CRM",
+          "Safety Compliance",
+          "Google Analytics",
+          "Customer Escalation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "OP-07",
+      "name": "Cameron Kim",
+      "rank": 7,
+      "resume": {
+        "headline": "Process innovator reducing costs by 114% while boosting KPIs",
+        "experience": [
+          {
+            "company": "CargoOne Logistics",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Quantum Plastics",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "Excel",
+          "Safety Compliance",
+          "Customer Escalation",
+          "Google Analytics",
+          "Content Creation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        },
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        }
+      ]
+    }
+  ]
+}

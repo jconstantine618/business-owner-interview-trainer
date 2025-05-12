@@ -1,0 +1,245 @@
+{
+  "role": "Sales Representative",
+  "competencies": [
+    "Prospecting",
+    "Objection Handling",
+    "Closing",
+    "CRM hygiene"
+  ],
+  "question_bank": [
+    "Tell me about a time you lost a deal at the last minute. What happened and what did you learn?",
+    "Describe a situation where you had to create urgency without discounting.",
+    "Give an example of overcoming a communications barrier with a prospect.",
+    "Walk me through your biggest win of the past year \u2014 how did you source, advance, and close it?",
+    "Share a time you missed quota. How did you adjust your plan?"
+  ],
+  "candidates": [
+    {
+      "id": "SA-01",
+      "name": "Harper Martinez",
+      "rank": 1,
+      "resume": {
+        "headline": "B2B SaaS closer with 128% quota attainment",
+        "experience": [
+          {
+            "company": "Bolt Logistics",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "CloudWorks",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "HubSpot",
+          "Troubleshooting",
+          "Negotiation",
+          "Python",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "SA-02",
+      "name": "Cameron Nguyen",
+      "rank": 2,
+      "resume": {
+        "headline": "B2B SaaS closer with 121% quota attainment",
+        "experience": [
+          {
+            "company": "CloudWorks",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "CloudWorks",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "HubSpot",
+          "QuickBooks",
+          "Safety Compliance",
+          "MEDDIC",
+          "Google Analytics"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "SA-03",
+      "name": "Cameron Kim",
+      "rank": 3,
+      "resume": {
+        "headline": "B2B SaaS closer with 139% quota attainment",
+        "experience": [
+          {
+            "company": "Bolt Logistics",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Acme CRM",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "QuickBooks",
+          "Troubleshooting",
+          "Excel",
+          "Safety Compliance",
+          "MEDDIC"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Short tenure",
+          "detail": "Left last role in under 12\u00a0months"
+        },
+        {
+          "label": "Skill mismatch",
+          "detail": "Limited experience with required software"
+        }
+      ]
+    },
+    {
+      "id": "SA-04",
+      "name": "Avery Wilson",
+      "rank": 4,
+      "resume": {
+        "headline": "B2B SaaS closer with 126% quota attainment",
+        "experience": [
+          {
+            "company": "Delta Tech",
+            "years": 1,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Delta Tech",
+            "years": 2,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Negotiation",
+          "Google Analytics",
+          "Content Creation",
+          "HubSpot",
+          "Troubleshooting"
+        ]
+      },
+      "red_flags": []
+    },
+    {
+      "id": "SA-05",
+      "name": "Taylor Smith",
+      "rank": 5,
+      "resume": {
+        "headline": "B2B SaaS closer with 119% quota attainment",
+        "experience": [
+          {
+            "company": "Acme CRM",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Acme CRM",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Associate Degree in Applied Science",
+        "skills": [
+          "Troubleshooting",
+          "QuickBooks",
+          "Excel",
+          "Google Analytics",
+          "HubSpot"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "SA-06",
+      "name": "Drew Garcia",
+      "rank": 6,
+      "resume": {
+        "headline": "B2B SaaS closer with 135% quota attainment",
+        "experience": [
+          {
+            "company": "Delta Tech",
+            "years": 3,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Delta Tech",
+            "years": 4,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "B.A. Communications",
+        "skills": [
+          "MEDDIC",
+          "Content Creation",
+          "Excel",
+          "Google Analytics",
+          "Negotiation"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    },
+    {
+      "id": "SA-07",
+      "name": "Jamie Nguyen",
+      "rank": 7,
+      "resume": {
+        "headline": "B2B SaaS closer with 126% quota attainment",
+        "experience": [
+          {
+            "company": "CloudWorks",
+            "years": 5,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          },
+          {
+            "company": "Delta Tech",
+            "years": 6,
+            "highlight": "Contributed to key projects and exceeded performance targets"
+          }
+        ],
+        "education": "Certificate Program",
+        "skills": [
+          "Negotiation",
+          "Google Analytics",
+          "Python",
+          "QuickBooks",
+          "Safety Compliance"
+        ]
+      },
+      "red_flags": [
+        {
+          "label": "Gaps in employment",
+          "detail": "Unexplained 18\u2011month gap in r\u00e9sum\u00e9"
+        }
+      ]
+    }
+  ]
+}
