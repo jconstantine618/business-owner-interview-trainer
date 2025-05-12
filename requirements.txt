@@ -1,0 +1,3 @@
+streamlit>=1.34
+openai>=1.14          # or any current 1.x version
+python-dotenv>=1.0
