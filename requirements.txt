@@ -1,3 +1,4 @@
 openai>=1.10.0
 streamlit
 python-dotenv
+# force rebuild
