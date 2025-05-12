@@ -18,19 +18,20 @@ from dotenv import load_dotenv
 
 # ---------- ENV / CONFIG ----------
 load_dotenv()  # optional: pull from .env locally
-# Load API key: first from Streamlit secrets, then fall back to OS env
 openai.api_key = st.secrets.get("OPENAI_API_KEY", "") or os.getenv("OPENAI_API_KEY")
 
-DATA_DIR       = pathlib.Path("candidate_personas")   # folder with your JSONs
-MODEL_NAME     = "gpt-4o-mini"                        # or gpt-4o, gpt-4-turbo, etc.
-MAX_CANDIDATES = 4                                    # max interviews per session
+# ←── UPDATED: point at your `data/` folder ──▶
+DATA_DIR       = pathlib.Path("data")
+
+MODEL_NAME     = "gpt-4o-mini"       # or gpt-4o, gpt-4-turbo, etc.
+MAX_CANDIDATES = 4                   # max interviews per session
 
 # ---------- HELPERS ----------
 @st.cache_resource
 def load_roles() -> dict:
     files = {f.stem.replace("_", " ").title(): f for f in DATA_DIR.glob("*.json")}
     if not files:
-        st.error("❗ No JSON files found in candidate_personas/")
+        st.error(f"❗ No JSON files found in {DATA_DIR}/")
     return files
 
 def open_json(path: pathlib.Path) -> dict:
