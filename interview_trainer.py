@@ -1,4 +1,4 @@
-# interview_trainer.py (with collapsible, clickable question guide)
+# interview_trainer.py (with collapsible, clickable question guide and pop fix)
 
 import os
 import json
@@ -175,7 +175,11 @@ elif ss.phase == "interview":
         align = "user" if msg["sender"] == "user" else "assistant"
         st.chat_message(align).markdown(msg["text"])
 
-    user_q = st.chat_input("Your question", value=ss.pop("insert_question", ""))
+    initial_value = ss.get("insert_question", "")
+    if "insert_question" in ss:
+        del ss["insert_question"]
+
+    user_q = st.chat_input("Your question", value=initial_value)
     if user_q:
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
         result = client.chat.completions.create(
