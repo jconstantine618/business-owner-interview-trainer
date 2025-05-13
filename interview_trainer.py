@@ -119,7 +119,7 @@ def score_interview(chat: list, candidate: dict) -> dict:
 # ---------- SIDEBAR ----------
 def show_sidebar_question_guide():
     question_groups = {
-        "🧐 Problem-Solving & Critical Thinking": [
+        "🤮 Problem-Solving & Critical Thinking": [
             "Tell me about a time you had to solve a difficult problem.",
             "Describe a situation where you had to make a difficult decision.",
             "Give an example of a goal you reached and how you achieved it."
@@ -203,6 +203,7 @@ elif ss.phase == "interview":
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
         ss["insert_question"] = None
         ss.pending_response = True
+        ss.last_feedback = ""
         st.rerun()
     elif ss.pending_response:
         result = client.chat.completions.create(
@@ -230,7 +231,7 @@ Answer: {resp}"""
         feedback_resp = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[{"role": "user", "content": feedback_prompt}],
-            max_tokens=200,
+            max_tokens=300,
             temperature=0.5
         )
         ss.last_feedback = feedback_resp.choices[0].message.content.strip()
@@ -238,13 +239,15 @@ Answer: {resp}"""
         st.rerun()
 
     if ss.last_feedback:
-        st.chat_message("system").markdown(f"**Interview Coach Note:** {ss.last_feedback}")
-        ss.last_feedback = ""
+        with st.chat_message("system"):
+            st.markdown("**Interview Coach Note:**")
+            st.markdown(ss.last_feedback)
 
     user_q = st.chat_input("Your question")
     if user_q:
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
         ss.pending_response = True
+        ss.last_feedback = ""
         st.rerun()
 
     st.markdown("---")
