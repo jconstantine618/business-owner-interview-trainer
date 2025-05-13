@@ -45,6 +45,7 @@ def init_session():
         "scorecard": {},
         "insert_question": None,
         "last_feedback": "",
+        "pending_response": False,
     }
     for k, v in defaults.items():
         if k not in ss:
@@ -201,12 +202,9 @@ elif ss.phase == "interview":
         user_q = ss["insert_question"]
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
         ss["insert_question"] = None
-    else:
-        user_q = st.chat_input("Your question")
-        if user_q:
-            ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
-
-    if ss.chat_logs[cand["id"]] and ss.chat_logs[cand["id"]][-1]["sender"] == "user":
+        ss.pending_response = True
+        st.rerun()
+    elif ss.pending_response:
         result = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[
@@ -221,7 +219,6 @@ elif ss.phase == "interview":
         resp = result.choices[0].message.content.strip()
         ss.chat_logs[cand["id"]].append({"sender": "ai", "text": resp})
 
-        # Add interview coaching note
         feedback_prompt = f"""
 You are an expert interview coach.
 Given the candidate's answer below, explain:
@@ -229,8 +226,7 @@ Given the candidate's answer below, explain:
 2. What insight it provides the interviewer
 3. Any red flags or weaknesses in the answer (if any)
 ---
-Answer: """ + resp
-
+Answer: {resp}"""
         feedback_resp = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[{"role": "user", "content": feedback_prompt}],
@@ -238,7 +234,17 @@ Answer: """ + resp
             temperature=0.5
         )
         ss.last_feedback = feedback_resp.choices[0].message.content.strip()
+        ss.pending_response = False
+        st.rerun()
+
+    if ss.last_feedback:
         st.chat_message("system").markdown(f"**Interview Coach Note:** {ss.last_feedback}")
+        ss.last_feedback = ""
+
+    user_q = st.chat_input("Your question")
+    if user_q:
+        ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
+        ss.pending_response = True
         st.rerun()
 
     st.markdown("---")
