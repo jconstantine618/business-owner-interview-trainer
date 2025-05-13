@@ -1,30 +1,32 @@
-user_q = None
-if ss.get("insert_question"):
-    with st.form(key="question_form", clear_on_submit=True):
-        user_q = st.text_input("Suggested Question", value=ss["insert_question"])
-        if st.form_submit_button("Send"):
+# ---------- Interview ----------
+elif ss.phase == "interview":
+    user_q = None
+    if ss.get("insert_question"):
+        with st.form(key="question_form", clear_on_submit=True):
+            user_q = st.text_input("Suggested Question", value=ss["insert_question"])
+            if st.form_submit_button("Send"):
+                ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
+                ss["insert_question"] = None
+                st.rerun()
+    else:
+        user_q = st.chat_input("Your question")
+        if user_q:
             ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
-            ss["insert_question"] = None
+            result = client.chat.completions.create(
+                model=MODEL_NAME,
+                messages=[
+                    {"role": "system", "content": system_prompt(cand, ss.role_data["role"])},
+                    *[
+                        {"role": "assistant" if m["sender"] == "ai" else "user", "content": m["text"]}
+                        for m in ss.chat_logs[cand["id"]]
+                    ]
+                ],
+                max_tokens=150,
+                temperature=0.7,
+            )
+            resp = result.choices[0].message.content.strip()
+            ss.chat_logs[cand["id"]].append({"sender": "ai", "text": resp})
             st.rerun()
-else:
-    user_q = st.chat_input("Your question")
-    if user_q:
-        ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
-        result = client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=[
-                {"role": "system", "content": system_prompt(cand, ss.role_data["role"])},
-                *[
-                    {"role": "assistant" if m["sender"] == "ai" else "user", "content": m["text"]}
-                    for m in ss.chat_logs[cand["id"]]
-                ]
-            ],
-            max_tokens=150,
-            temperature=0.7,
-        )
-        resp = result.choices[0].message.content.strip()
-        ss.chat_logs[cand["id"]].append({"sender": "ai", "text": resp})
-        st.rerun()
 
     st.markdown("---")
     if st.button("➔ End Interview"):
