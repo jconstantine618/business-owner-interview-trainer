@@ -1,6 +1,3 @@
-# interview_trainer.py
-# Interview Training Chatbot (Streamlit + OpenAI SDK v1.0+)
-
 import os
 import json
 import pathlib
@@ -18,7 +15,7 @@ client = OpenAI(
 )
 
 DATA_DIR = pathlib.Path("data")
-MODEL_NAME = "gpt-4o"  # or gpt-4o-mini, gpt-4-turbo, etc.
+MODEL_NAME = "gpt-4o"
 MAX_CANDIDATES = 4
 
 # ---------- HELPERS ----------
@@ -52,10 +49,34 @@ def get_candidate(rank: int, data: dict) -> dict:
     return next(c for c in data["candidates"] if c["rank"] == rank)
 
 def system_prompt(candidate: dict, role: str) -> str:
+    rank = candidate["rank"]
     lines = [candidate["resume"]["headline"]]
     for exp in candidate["resume"]["experience"]:
         lines.append(f"- {exp['company']} ({exp['years']} yrs): {exp['highlight']}")
     skills = ", ".join(candidate["resume"]["skills"])
+
+    # Adjust response quality based on rank
+    worst_rank = max(c["rank"] for c in st.session_state.role_data["candidates"])
+    if rank == 1:
+        quality_instructions = (
+            "Give highly polished, thoughtful, articulate responses. "
+            "Demonstrate leadership, emotional intelligence, critical thinking, and concise communication. "
+            "Avoid filler words. Stay focused and insightful."
+        )
+    elif rank == worst_rank:
+        quality_instructions = (
+            "Give vague, awkward, or short responses. You may hesitate, over-explain, or deflect blame. "
+            "Avoid specifics. Use filler words like 'uh', 'I guess', or 'you know'. "
+            "When asked about mistakes, try to shift blame or minimize responsibility. "
+            "Sound uncertain or passive. Avoid taking clear initiative."
+        )
+    else:
+        quality_instructions = (
+            "Give moderately competent responses — a mix of strong and weak points. "
+            "Occasionally use filler words. Miss some key insights. Offer partial or slightly off-topic answers. "
+            "Don't be too confident or too insecure. You're trying, but not fully prepared."
+        )
+
     return f"""
 You are {candidate['name']}, interviewing for the {role} position.
 Answer as the candidate would, based on this résumé:
@@ -64,7 +85,9 @@ Answer as the candidate would, based on this résumé:
 Education: {candidate['resume']['education']}
 Key skills: {skills}
 
-Be professional, concise, and truthful. Reveal red flags ONLY if asked probing questions.
+{quality_instructions}
+
+Be professional unless otherwise specified. Only reveal red flags if the interviewer asks probing questions.
 Keep answers under 3 sentences unless asked to elaborate.
 """
 
@@ -202,34 +225,3 @@ elif ss.phase == "score":
         for k in list(st.session_state.keys()):
             del st.session_state[k]
         st.rerun()
-with st.sidebar.expander("💬 Interview Question Guide", expanded=True):
-    st.markdown("### 🧠 Problem-Solving & Critical Thinking")
-    st.markdown("- Tell me about a time you had to solve a difficult problem...")
-    st.markdown("- Describe a situation where you had to make a difficult decision...")
-    st.markdown("- Give an example of a goal you reached and how you achieved it.")
-
-    st.markdown("### 🤝 Teamwork & Collaboration")
-    st.markdown("- Tell me about a time you had to work with a difficult team member.")
-    st.markdown("- Describe a situation where you had to collaborate with someone different.")
-    st.markdown("- Give an example of a time you had to work under pressure.")
-
-    st.markdown("### 🧭 Leadership & Initiative")
-    st.markdown("- Describe a time when you had to demonstrate leadership skills.")
-    st.markdown("- Tell me about a time you took initiative on a project.")
-    st.markdown("- Give an example of handling a difficult situation and what you learned.")
-
-    st.markdown("### ⚖️ Conflict Resolution")
-    st.markdown("- Tell me about a time you had a conflict with a colleague.")
-    st.markdown("- Describe a time you disagreed with a superior's decision.")
-
-    st.markdown("### ❌ Mistakes & Failures")
-    st.markdown("- Tell me about a time you made a mistake at work.")
-    st.markdown("- Describe an occasion when you failed at a task and how you handled it.")
-
-    st.markdown("### 📌 Other Common Questions")
-    st.markdown("- What is your biggest strength?")
-    st.markdown("- What is your greatest weakness?")
-    st.markdown("- Why do you think you're a good fit for this position?")
-    st.markdown("- What motivates you?")
-    st.markdown("- How do you handle stress?")
-    st.markdown("- What are your career goals?")
