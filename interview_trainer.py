@@ -1,4 +1,4 @@
-# interview_trainer.py — MVP with Ranked Response Behavior + Clickable Questions
+# interview_trainer.py — MVP with Ranked Response Behavior + Clickable Questions + Response Feedback
 
 import os
 import json
@@ -44,6 +44,7 @@ def init_session():
         "chat_logs": defaultdict(list),
         "scorecard": {},
         "insert_question": None,
+        "last_feedback": "",
     }
     for k, v in defaults.items():
         if k not in ss:
@@ -117,7 +118,7 @@ def score_interview(chat: list, candidate: dict) -> dict:
 # ---------- SIDEBAR ----------
 def show_sidebar_question_guide():
     question_groups = {
-        "🧠 Problem-Solving & Critical Thinking": [
+        "🧐 Problem-Solving & Critical Thinking": [
             "Tell me about a time you had to solve a difficult problem.",
             "Describe a situation where you had to make a difficult decision.",
             "Give an example of a goal you reached and how you achieved it."
@@ -127,7 +128,7 @@ def show_sidebar_question_guide():
             "Describe a situation where you had to collaborate with someone different.",
             "Give an example of a time you had to work under pressure."
         ],
-        "🧭 Leadership & Initiative": [
+        "🧽 Leadership & Initiative": [
             "Describe a time when you had to demonstrate leadership skills.",
             "Tell me about a time you took initiative on a project.",
             "Give an example of handling a difficult situation and what you learned."
@@ -161,7 +162,7 @@ init_session()
 ss = st.session_state
 roles_map = load_roles()
 
-st.title("🧑‍💼 Interview Training Simulator")
+st.title("👨‍💼 Interview Training Simulator")
 show_sidebar_question_guide()
 
 # ---------- Setup ----------
@@ -182,7 +183,7 @@ if ss.phase == "setup":
             max_selections=MAX_CANDIDATES
         )
         if st.button("✅ Start Interviews", disabled=len(shortlist) == 0):
-            ss.shortlist = [int(x.split("·")[0].strip()) for x in shortlist]
+            ss.shortlist = [int(x.split(" ·")[0].strip()) for x in shortlist]
             ss.phase = "interview"
             st.rerun()
 
@@ -200,7 +201,12 @@ elif ss.phase == "interview":
         user_q = ss["insert_question"]
         ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
         ss["insert_question"] = None
+    else:
+        user_q = st.chat_input("Your question")
+        if user_q:
+            ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
 
+    if ss.chat_logs[cand["id"]] and ss.chat_logs[cand["id"]][-1]["sender"] == "user":
         result = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[
@@ -209,33 +215,34 @@ elif ss.phase == "interview":
                 {"role": "assistant" if m["sender"] == "ai" else "user", "content": m["text"]}
                 for m in ss.chat_logs[cand["id"]]
             ],
-            max_tokens=150,
+            max_tokens=300,
             temperature=0.7,
         )
         resp = result.choices[0].message.content.strip()
         ss.chat_logs[cand["id"]].append({"sender": "ai", "text": resp})
+
+        # Add interview coaching note
+        feedback_prompt = f"""
+You are an expert interview coach.
+Given the candidate's answer below, explain:
+1. What this answer reveals about the candidate
+2. What insight it provides the interviewer
+3. Any red flags or weaknesses in the answer (if any)
+---
+Answer: """ + resp
+
+        feedback_resp = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": feedback_prompt}],
+            max_tokens=200,
+            temperature=0.5
+        )
+        ss.last_feedback = feedback_resp.choices[0].message.content.strip()
+        st.chat_message("system").markdown(f"**Interview Coach Note:** {ss.last_feedback}")
         st.rerun()
-    else:
-        user_q = st.chat_input("Your question")
-        if user_q:
-            ss.chat_logs[cand["id"]].append({"sender": "user", "text": user_q})
-            result = client.chat.completions.create(
-                model=MODEL_NAME,
-                messages=[
-                    {"role": "system", "content": system_prompt(cand, ss.role_data["role"])}
-                ] + [
-                    {"role": "assistant" if m["sender"] == "ai" else "user", "content": m["text"]}
-                    for m in ss.chat_logs[cand["id"]]
-                ],
-                max_tokens=150,
-                temperature=0.7,
-            )
-            resp = result.choices[0].message.content.strip()
-            ss.chat_logs[cand["id"]].append({"sender": "ai", "text": resp})
-            st.rerun()
 
     st.markdown("---")
-    if st.button("➜ End Interview"):
+    if st.button("➔ End Interview"):
         ss.scorecard[cand["id"]] = score_interview(ss.chat_logs[cand["id"]], cand)
         ss.current_idx += 1
         if ss.current_idx >= len(ss.shortlist):
@@ -250,7 +257,7 @@ elif ss.phase == "selection":
         for r in ss.shortlist
     }
     hire = st.selectbox("Who would you hire?", options=list(id_map), format_func=lambda cid: id_map[cid])
-    if st.button("🏁 Submit & Get Feedback", disabled=hire is None):
+    if st.button("🌟 Submit & Get Feedback", disabled=hire is None):
         ss.hire_id = hire
         ss.phase = "score"
         st.rerun()
@@ -263,7 +270,7 @@ elif ss.phase == "score":
     bonus = 20 if chosen_rank == best else (15 if chosen_rank == best + 1 else 5)
     total += bonus
 
-    st.success(f"🎯 **Overall Interview Score: {total}/100** (Bonus: {bonus} pts)")
+    st.success(f"🌟 **Overall Interview Score: {total}/100** (Bonus: {bonus} pts)")
     st.subheader("Strengths")
     st.write("- Strong open-ended questioning 👍" if total > 60 else "- Work on deeper probing and follow-ups.")
     st.subheader("Missed Opportunities")
